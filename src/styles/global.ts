@@ -14,7 +14,7 @@ export default css`
         margin: 0;
         padding: 0;
         font-family: 'Roboto', sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         font-size: .95rem;
         line-height: 1.5rem;
         background-color: #f4f2ee;

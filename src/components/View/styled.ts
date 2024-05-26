@@ -3,30 +3,23 @@ import { DESKTOP_MAX_WIDTH } from '../../utils/const.ts';
 import { fadeIn } from '../../styles/animations.ts';
 
 export const Wrapper = styled.div`
-    position: absolute;
     width: 900px;
-    height: 95vh;
     max-width: 95%;
-    margin: 0 auto;
-    display: grid;
-    justify-items: stretch;
-    align-items: stretch;
-    top: 50%;
-    left: 0;
-    right: 0;
+    margin: 20px auto 0;
     opacity: 0;
-    transform: translateY(-50%);
     animation: ${fadeIn} .8s linear forwards;
 `;
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: minmax(250px, 300px) 1fr;
-    grid-template-rows: fit-content(100%);
     gap: 20px;
+    grid-template-columns: minmax(250px, 300px) 1fr;
+    grid-template-rows: repeat(4, fit-content(100%));
     grid-template-areas: 
     "avatar content"
-    "contact content";
+    "contact content"
+    "contact plants";
+    ". plants";
 
     @media (max-width: ${DESKTOP_MAX_WIDTH}) {
         grid-template-columns: auto;
@@ -34,6 +27,8 @@ export const Container = styled.div`
         "avatar"
         "content"
         "contact"
+        "plants"
+        "."
     }
 `;
 
