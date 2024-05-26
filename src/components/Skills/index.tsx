@@ -1,7 +1,8 @@
 import Content from '../View/content.tsx';
 import * as Styled from './styled.ts';
-import Skill, { skills } from './Skill';
+import Skill from './Skill';
 import { Section } from '../View/styled.ts';
+import List from './list.ts';
 
 const Skills = () => {
   return (
@@ -9,8 +10,8 @@ const Skills = () => {
       <Content title="Mostly use">
         <Styled.Slider>
           <Styled.Skills>
-            {skills.map((skill) => <Skill key={skill} service={skill}/> )}
-            {skills.map((skill) => <Skill key={skill} service={skill}/> )}
+            {List.map((skill) => <Skill key={skill} service={skill}/> )}
+            {List.map((skill) => <Skill key={skill} service={skill}/> )}
           </Styled.Skills>
         </Styled.Slider>
       </Content>
